@@ -12,10 +12,22 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomePageModule'
   },
   {
+    path: "home/:category",
+    loadChildren: "./home/home.module#HomePageModule"
+  },
+  {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  {
+    path: 'posts/:id', loadChildren: './noticias/noticias.module#NoticiasPageModule'
+  },
+  {
+    path: 'tienda', loadChildren: './tienda/tienda.module#TiendaPageModule'
+  },
+  { path: 'categories', loadChildren: './categories/categories.module#CategoriesPageModule' }
 ];
+
 
 @NgModule({
   imports: [
